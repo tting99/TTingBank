@@ -4,10 +4,10 @@ const KEY = require('./codef-key');
 const mysql = require('mysql');
 
 const mysqlConnection = mysql.createConnection({
-  host: 'go5home.iptime.org', // rds엔트포인트(aws RDS)
-  user: 'capstone',
-  password: 'dK4!X!Y(Q6',
-  database: 'TTINGCARD_DB'
+  host: '-', // rds엔트포인트(aws RDS)
+  user: '-',
+  password: '-',
+  database: '-'
 });
 
 mysqlConnection.connect();
@@ -36,29 +36,8 @@ var month;
 // 계정 등록
 //------------------------------------------------------------------------------------------------//
 var codef_account_create_url = 'https://development.codef.io/v1/account/create'
-const PUBLIC_KEY = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnly1yy7UmR8j626+VMNaTLZvjG/DrsewHgz7kF1DR76psoMKcJcGmeHx7PhO+QLojNDZQ80LsWwYBUEsdrm/StYtP+1BfnIbUaW3+fk8ggz4DvgeRuoA6QHG9zBBYhe/MiZCs/DW2Nc+KC7fTeFesjmAQyc8dfEHv6wjUm0s+AsRJk0xWTBbN1+NjSQoOVwE30jbobRNLGsOSmqofhXNSMl0qNmsyYbSH+MhZMKD0DImLcsv61DNXe375jJTw4JF2uKSaQFi6XL7QiivjLByoLZdMODlB7wd1moq9KASrrlK6IHP9447qANskMe56tSaz1MLhMOlkjCqJL+4tPGX9QIDAQAB';
-// TODO: 비밀번호 앱에서 가져오는 테스트 중. 나중에 주석 풀기.
-// var RSA_password = publicEncRSA(PUBLIC_KEY, "djWjfkrh1324%");
+const PUBLIC_KEY = ''
 
-// var codef_account_create_body = {
-//             'accountList':[                  // 계정목록
-//               {
-//                   "countryCode": "KR",        // (필수)국가코드
-//                   "businessType": "CD",       // (필수)업무구분 -> 은행,저축은행 : BK / 카드 : CD / 증권 : ST / 보험 : IS
-//                   "clientType": "P",          // (필수)고객구분 -> 개인 : P / 기업, 법인 : B / 통합 : A
-//                   "organization": "0305",     // (필수)기관코드
-//                   "loginType": "1",           // (필수)로그인방식 -> 인증서 : 0 / 아이디, 패스워드 : 1
-//                   "id": "askhs0302",          // (옵션)아이디방식 -> 아이디 방식일 경우 필수/ (키움)복수 계정 보유 고객의 경우 사용
-//                   "password": RSA_password,   // (필수)인증서 방식일 경우 인증서 패스워드 / 아이디 방식일 경우 아이디 패스우드 입력
-//                   "birthDate": "980302",      // (옵션)생년월일
-//                   //"loginTypeLevel":"",        // (옵션)신한/롯데 법인카드의 경우 [로그인구분] 이용자 : 0 / 사업장/부서관리자 : 1 / 총괄관리자 : 2. (default : 2)
-//                   //"clientTypeLevel":"",       // (옵션)신한 법인카드의 경우 [회원구분] 신용카드 회원 : 0 / 체크카드 회원 : 1 / 연구비 신용카드 회원 : 2
-//                   //"cardNo":"",                // (옵션)KB카드 소지확인 인증이 필요한 경우 필수 : 마스킹 없는 전체 카드번호 입력
-//                   //"cardPassword":"",          // (옵션)KB카드 소지확인 필요한 경우 : 카드 비밀번호 앞 2자리
-//               }
-//             ]
-// };
-//------------------------------------------------------------------------------------------------//
 // RSA 암호화
 //------------------------------------------------------------------------------------------------//
 function publicEncRSA(publicKey, data) {
@@ -73,8 +52,8 @@ function publicEncRSA(publicKey, data) {
 //------------------------------------------------------------------------------------------------//
 // AUTH 2.0 인증
 //------------------------------------------------------------------------------------------------//
-const DEMO_CLIENT_ID = '7b8e76e1-94be-447d-a405-f8f9c92231e8';
-const DEMO_CLIENT_SECRET = 'de668143-1bc1-4f4f-b0ef-93decfa1d637';
+const DEMO_CLIENT_ID = '-';
+const DEMO_CLIENT_SECRET = '-';
 
 
 var https = require("https");
