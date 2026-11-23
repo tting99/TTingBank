@@ -4,10 +4,10 @@ const mysql = require('mysql');
 const router = express.Router();
 
 const mysqlConnection = mysql.createConnection({
-    host: 'go5home.iptime.org', // RDS endpoint (AWS RDS)
-    user: 'capstone',
-    password: 'dK4!X!Y(Q6',
-    database: 'TTINGCARD_DB'
+    host: '-', // RDS endpoint (AWS RDS)
+    user: '-',
+    password: '-',
+    database: '-'
 });
 
 console.log("Code 1");
